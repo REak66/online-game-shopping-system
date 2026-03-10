@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/core/services/admin.service.ts"],
+  "sourcesContent": ["import { Injectable } from '@angular/core';\nimport { HttpClient } from '@angular/common/http';\nimport { Observable } from 'rxjs';\nimport { environment } from '../../../environments/environment';\n\n@Injectable({ providedIn: 'root' })\nexport class AdminService {\n  private apiUrl = `${environment.apiUrl}/admin`;\n\n  constructor(private http: HttpClient) {}\n\n  getDashboardStats(): Observable<any> {\n    return this.http.get(`${this.apiUrl}/dashboard`);\n  }\n\n  getUsers(): Observable<any> {\n    return this.http.get(`${this.apiUrl}/users`);\n  }\n\n  updateUser(id: string, data: any): Observable<any> {\n    return this.http.put(`${this.apiUrl}/users/${id}`, data);\n  }\n\n  deleteUser(id: string): Observable<any> {\n    return this.http.delete(`${this.apiUrl}/users/${id}`);\n  }\n}\n"],
+  "mappings": ";;;;;;;;;;;;AAMM,IAAO,eAAP,MAAO,cAAY;EAGvB,YAAoB,MAAgB;AAAhB,SAAA,OAAA;AAFZ,SAAA,SAAS,GAAG,YAAY,MAAM;EAEC;EAEvC,oBAAiB;AACf,WAAO,KAAK,KAAK,IAAI,GAAG,KAAK,MAAM,YAAY;EACjD;EAEA,WAAQ;AACN,WAAO,KAAK,KAAK,IAAI,GAAG,KAAK,MAAM,QAAQ;EAC7C;EAEA,WAAW,IAAY,MAAS;AAC9B,WAAO,KAAK,KAAK,IAAI,GAAG,KAAK,MAAM,UAAU,EAAE,IAAI,IAAI;EACzD;EAEA,WAAW,IAAU;AACnB,WAAO,KAAK,KAAK,OAAO,GAAG,KAAK,MAAM,UAAU,EAAE,EAAE;EACtD;;;uCAnBW,eAAY,mBAAA,UAAA,CAAA;IAAA;EAAA;;4EAAZ,eAAY,SAAZ,cAAY,WAAA,YADC,OAAM,CAAA;EAAA;;;sEACnB,cAAY,CAAA;UADxB;WAAW,EAAE,YAAY,OAAM,CAAE;;;",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/shared/components/star-rating/star-rating.component.ts"],
+  "sourcesContent": ["\n    .stars { display: flex; gap: 2px; }\n    .star { font-size: 0.85rem; color: #3a3e58; transition: color 0.2s; }\n    .star.filled { color: #F59E0B; }\n    .star.half { color: #F59E0B; opacity: 0.55; }\n  "],
+  "mappings": ";AACI,CAAA;AAAS,WAAA;AAAe,OAAA;;AACxB,CAAA;AAAQ,aAAA;AAAoB,SAAA;AAAgB,cAAA,MAAA;;AAC5C,CADA,IACA,CAAA;AAAe,SAAA;;AACf,CAFA,IAEA,CAAA;AAAa,SAAA;AAAgB,WAAA;;",
+  "names": []
+}
